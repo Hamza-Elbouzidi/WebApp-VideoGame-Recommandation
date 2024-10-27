@@ -44,5 +44,5 @@ def recommend(appid: int):
     game_embeddings)[0]
     sorted_indices = distances.argsort()
     return [json.loads(game_db.iloc[idx].to_json()) for idx in sorted_indices
-    [1:5]]
+    [1:13]]
     
