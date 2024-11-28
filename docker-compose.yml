@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  webapp:
+    build: ./webapp
+    ports:
+      - "3000:3000"
+    networks:
+      - videogame_network
+
+  server:
+    build: ./server
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data  # Mounting local data directory to container's /app/data
+    networks:
+      - videogame_network
+
+networks:
+  videogame_network:
+    driver: bridge

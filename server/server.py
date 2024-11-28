@@ -9,8 +9,8 @@ from sklearn.metrics.pairwise import cosine_distances
 app = FastAPI()
 
 origins = [
-    "http://localhost",
-    "http://localhost:3000",
+    "http://localhost:3000",  # Update this if your fron
+    "http://webapp:3000",
 ]
 
 app.add_middleware(
@@ -21,7 +21,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-game_db = pd.read_parquet("../data/game_database.parquet")
+game_db = pd.read_parquet("/app/data/game_database.parquet")
 game_embeddings = np.array(game_db.embedding.tolist())
 
 

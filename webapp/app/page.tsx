@@ -37,7 +37,7 @@ export default function Home() {
       <main>
         <div className="content">
         <input type="search" className ="searchbar" placeholder="Enter text" onChange={(e) =>{
-          fetch('http://127.0.0.1:8000/search?' + new URLSearchParams({ query: e.target.value})).then((res) => res.json()).then((data)=>{
+          fetch('http://localhost:8000/search?' + new URLSearchParams({ query: e.target.value})).then((res) => res.json()).then((data)=>{
             console.log(data);
             setSearchResults(data as SearchResults[]);
           });
@@ -47,7 +47,7 @@ export default function Home() {
         <div className="results">
           {searchResults.map((result , idx) => <>
             <div key ={idx} className="result" onClick={(e) => {
-              fetch('http://127.0.0.1:8000/recommend?appid=' + result.game.appid)
+              fetch('http://localhost:8000/recommend?appid=' + result.game.appid)
               .then((res) => res.json()).then((data)=>{
                 console.log(data);
                 setRecommandations(data as Game[]);
