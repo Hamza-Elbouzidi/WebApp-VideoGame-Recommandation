@@ -9,7 +9,8 @@ from sklearn.metrics.pairwise import cosine_distances
 app = FastAPI()
 
 origins = [
-    "http://localhost:3000",  # Update this if your fron
+    "http://localhost:3000",
+    "http://localhost:3001",  # Update this if your fron
     "http://webapp:3000",
 ]
 
