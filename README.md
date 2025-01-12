@@ -38,6 +38,11 @@ Furthermore, a web application built with **FastAPI** and **Next.js** provides a
 7. **Data Storage**:
    - The processed DataFrame containing game details and embeddings is saved as a Parquet file ("game_database.parquet") for efficient storage and future access.
 
+8. **Web Application and Deployment**:
+   - The web application, built using **Next.js**, provides users with an intuitive interface to explore and find game recommendations. Users can search for a game by its name, select from suggested matches, and view a list of personalized recommendations based on similarity analysis.
+   - The project is deployed on a live server, making it accessible to end-users.
+   - Deployed Application: [Steam Game Recommendation System](http://65.20.105.247:3000/)
+
 ## Key Technologies Used
 - Python
 - Pandas
@@ -47,6 +52,7 @@ Furthermore, a web application built with **FastAPI** and **Next.js** provides a
 - textdistance (for string similarity)
 - FastAPI (for API development)
 - Next.js (for the web application)
+- Deployment: Hosted on a public server
 
 ## Conclusion
 This project demonstrates how data analysis and machine learning can be applied to the gaming industry, providing insights that can enhance user experience and facilitate game discovery. The combination of textual data processing, embedding generation, and an interactive web interface allows for effective comparisons and recommendations based on user preferences.
